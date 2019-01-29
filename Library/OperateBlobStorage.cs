@@ -18,7 +18,8 @@ namespace TYS.Library
         /// <summary>
         /// アップロード
         /// </summary>
-        /// <param name="storageConfig"></param>
+        /// <param name="accountName"></param>
+        /// <param name="accountKey"></param>
         /// <param name="containerName"></param>
         /// <param name="fileName"></param>
         /// <param name="fileStream"></param>
@@ -44,7 +45,8 @@ namespace TYS.Library
         /// <summary>
         /// ダウンロード
         /// </summary>
-        /// <param name="storageConfig"></param>
+        /// <param name="accountName"></param>
+        /// <param name="accountKey"></param>
         /// <param name="containerName"></param>
         /// <param name="fileName"></param>
         /// <returns></returns>
@@ -65,7 +67,8 @@ namespace TYS.Library
         /// <summary>
         /// コンテナ存在チェック
         /// </summary>
-        /// <param name="storageConfig"></param>
+        /// <param name="accountName"></param>
+        /// <param name="accountKey"></param>
         /// <param name="containerName"></param>
         /// <returns></returns>
         public static async Task<bool> ContainerExists(string accountName, string accountKey, string containerName)
@@ -81,7 +84,8 @@ namespace TYS.Library
         /// <summary>
         /// Blobブロック存在チェック
         /// </summary>
-        /// <param name="storageConfig"></param>
+        /// <param name="accountName"></param>
+        /// <param name="accountKey"></param>
         /// <param name="containerName"></param>
         /// <param name="blobName"></param>
         /// <returns></returns>
@@ -102,7 +106,8 @@ namespace TYS.Library
         /// <summary>
         /// Blob名の接頭辞検索（提供されている機能による制約）
         /// </summary>
-        /// <param name="storageConfig"></param>
+        /// <param name="accountName"></param>
+        /// <param name="accountKey"></param>
         /// <param name="containerName"></param>
         /// <param name="prefix"></param>
         /// <returns></returns>
