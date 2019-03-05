@@ -22,6 +22,7 @@ namespace EventLog
             Controller = 1,
             UseCase,
             DataStore,
+            Translater,
         }
 
     }
