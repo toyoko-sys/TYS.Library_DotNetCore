@@ -20,14 +20,14 @@ namespace TYS.Library.Controller
             }
             else
             {
-                string message = args.Model.Message ?? null;
+                string message = args.Model.Message;
                 int errorCode = args.Model.ErrorCode ?? args.Model.GetType() == typeof(int) ? args.Model : StatusCodes.Status500InternalServerError;
 
                 if (!string.IsNullOrEmpty(message))
                 {
-                    ret = new ObjectResult(new { message = args.Model.Message })
+                    ret = new ObjectResult(new { message = message })
                     {
-                        StatusCode = args.Model.ErrorCode
+                        StatusCode = errorCode
                     };
                 }
                 else
@@ -54,14 +54,14 @@ namespace TYS.Library.Controller
             }
             else
             {
-                string message = args.Model.Message ?? null;
+                string message = args.Model.Message;
                 int errorCode = args.Model.ErrorCode ?? args.Model.GetType() == typeof(int) ? args.Model : StatusCodes.Status500InternalServerError;
 
                 if (!string.IsNullOrEmpty(message))
                 {
-                    ret = new ObjectResult(new { message = args.Model.Message })
+                    ret = new ObjectResult(new { message = message })
                     {
-                        StatusCode = args.Model.ErrorCode
+                        StatusCode = errorCode
                     };
                 }
                 else
