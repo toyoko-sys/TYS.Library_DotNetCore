@@ -21,7 +21,7 @@ namespace TYS.Library.Controller
             else
             {
                 string message = args.Model.Message;
-                int errorCode = args.Model.ErrorCode ?? args.Model.GetType() == typeof(int) ? args.Model : StatusCodes.Status500InternalServerError;
+                int errorCode = args.Model.ErrorCode != null ? args.Model.ErrorCode : args.Model.GetType() == typeof(int) ? args.Model : StatusCodes.Status500InternalServerError;
 
                 if (!string.IsNullOrEmpty(message))
                 {
@@ -55,7 +55,7 @@ namespace TYS.Library.Controller
             else
             {
                 string message = args.Model.Message;
-                int errorCode = args.Model.ErrorCode ?? args.Model.GetType() == typeof(int) ? args.Model : StatusCodes.Status500InternalServerError;
+                int errorCode = args.Model.ErrorCode != null ? args.Model.ErrorCode : args.Model.GetType() == typeof(int) ? args.Model : StatusCodes.Status500InternalServerError;
 
                 if (!string.IsNullOrEmpty(message))
                 {
