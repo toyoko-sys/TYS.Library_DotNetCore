@@ -72,5 +72,39 @@ namespace TYS.Library.Controller
 
             return ret;
         }
+
+        /// <summary>
+        /// 返却用のActionResultを作成します
+        /// </summary>
+        /// <param name="args"></param>
+        /// <param name="mediaType"></param>
+        /// <returns></returns>
+        protected ActionResult CreateMediaResult(ResponseArgs args, string mediaType)
+        {
+            ActionResult ret;
+            if (args.Result)
+            {
+                ret = new FileStreamResult(args.Model, mediaType);
+            }
+            else
+            {
+                string message = args.Model.Message;
+                int errorCode = args.Model.ErrorCode != null ? args.Model.ErrorCode : args.Model.GetType() == typeof(int) ? args.Model : StatusCodes.Status500InternalServerError;
+
+                if (!string.IsNullOrEmpty(message))
+                {
+                    ret = new ObjectResult(new { message = message })
+                    {
+                        StatusCode = errorCode
+                    };
+                }
+                else
+                {
+                    ret = new StatusCodeResult(errorCode);
+                }
+            }
+
+            return ret;
+        }
     }
 }
