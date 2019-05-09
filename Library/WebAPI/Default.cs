@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TYS.Library.Library.WebAPI
+namespace TYS.Library.WebAPI
 {
     public abstract class Default
     {

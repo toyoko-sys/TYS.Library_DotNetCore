@@ -1,4 +1,4 @@
-﻿namespace TYS.Library.Library.WebAPI
+﻿namespace TYS.Library.WebAPI
 {
     public struct AuthenticationStruct
     {

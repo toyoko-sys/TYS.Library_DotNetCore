@@ -1,8 +1,7 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace TYS.Library.Library.WebAPI
+namespace TYS.Library.WebAPI
 {
     /// <summary>
     /// POST

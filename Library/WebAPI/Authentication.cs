@@ -1,6 +1,6 @@
 ﻿using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
-namespace TYS.Library.Library.WebAPI
+namespace TYS.Library.WebAPI
 {
     /// <summary>
     /// 認証クラス
