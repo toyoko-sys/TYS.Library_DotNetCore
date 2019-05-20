@@ -63,7 +63,7 @@ namespace TYS.Library.WebAPI
                         if (retryCount < MAX_RETRY_COUNT)
                         {
                             retryCount++;
-                            return await Call(url);
+                            return await Call(url, data);
                         }
                     }
                 }
